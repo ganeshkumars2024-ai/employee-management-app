@@ -19,9 +19,11 @@ pipeline {
 
         stage('Test Application') {
             steps {
-                bat 'python --version'
-                bat 'python -m pip install -r requirements.txt'
-                bat 'python -m pytest -v'
+                 bat 'where python'
+                  bat 'python --version'
+                   bat 'python -m pip --version'
+                   bat 'python -m pip install -r requirements.txt'
+                    bat 'python -m pytest -v'
             }
         }
 
